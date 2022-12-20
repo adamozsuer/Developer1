@@ -2,19 +2,19 @@ public class Dinner {
    public Integer numberOfJuice;
    public String mealName;
     
-    public Dinner(){
+    public dinner(){
          numberOfJuice = 2;
         mealName = 'Pizza';
         
     }
     
-     public Dinner(String otherMeal, Integer newNumberOfJuice){
+     public dinner(String otherMeal, Integer newNumberOfJuice){
          numberOfJuice = newNumberOfJuice;
         mealName = otherMeal;
         
     }
     
-    public Dinner(String otherMeal, Integer newNumberOfJuice, Integer afterDinnerNumberOfJuice){
+    public dinner(String otherMeal, Integer newNumberOfJuice, Integer afterDinnerNumberOfJuice){
          numberOfJuice = newNumberOfJuice + afterDinnerNumberOfJuice;
         mealName = otherMeal;
         
