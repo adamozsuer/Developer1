@@ -1,8 +1,8 @@
-public with sharing class Enemy {
+public virtual class Enemy {
     
-public void talk(){
+public virtual void talk(){ // virtual keyword give opportunity to child class override
 
-    system.debug('I am an emeny. You better run!');
+    system.debug('I am an enemy. You better run!');
 }
 
 
