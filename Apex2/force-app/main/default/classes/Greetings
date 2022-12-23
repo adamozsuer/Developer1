@@ -1,0 +1,69 @@
+public class Greeting {
+    public String firstName = 'Smith';
+    public String fullName() {
+        String lastName = 'Albert';
+        String fName = firstName + ' ' + lastName;
+        System.debug(fName);
+        return fName;
+    }
+    
+    public String greeting() {
+        
+        String greet = 'Hi';
+        String greet2 = greet + ' ' + fullName();
+        System.debug(greet2);
+        return greet2;
+    }
+    
+    public void greetingAll(List<String> nameList) {
+        
+        for (String name: nameList) {
+            System.debug('Hi ' + name);
+        }
+    }
+    
+    public void greetingAllButLast(List<String> nameList) {
+        
+        for (Integer i=0; i<nameList.size()-1; i++) {
+           System.debug('Hi ' + nameList.get(i));
+        }  
+    }
+    
+      public void greetingToSmith(List<String> nameList) {
+        
+        for (String name: nameList) {
+            if (name == 'Smith') {
+                System.debug('Hi ' + name);
+            } else {
+                
+            }           
+        }
+    }
+}
+
+
+/* 
+Greeting testname = new Greeting();
+system.debug(testname.greeting());
+system.debug('**********************');
+List<String> nameList = new List <String>();
+nameList.add('Tuba');
+nameList.add('Mervenur');
+nameList.add('Elona');
+nameList.add('Serra');
+nameList.add('Gunay');
+nameList.add('Elyesa');
+nameList.add('Adam');
+nameList.add('Destiny');
+nameList.add('Tiffany');
+nameList.add('Furkan');
+nameList.add('Havva');
+nameList.add('Max');
+nameList.add('Smith');
+testName.greetingAll(nameList);
+system.debug('**********************');
+testName.greetingAllButLast(nameList);
+system.debug('**********************');
+testName.greetingToMax(nameList);
+
+*/
