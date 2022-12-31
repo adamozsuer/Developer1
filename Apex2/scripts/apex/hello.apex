@@ -10,6 +10,6 @@ System.debug('Hello World!');
 System.debug('My name is ' + tempvar);
 
 /*TEst */ 
-/* Test *//**/desst */ /**TEstt*/
+/* Test *//**/desst */ 
 
 
