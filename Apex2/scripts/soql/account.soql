@@ -4,3 +4,25 @@
 //     SFDX: Execute SOQL Query with Currently Selected Text
 
 SELECT Id, Name FROM Account
+/*
+public class MyClass {
+    
+    public static void newAcc(){
+        
+        Account acc = new Account();
+        acc.Name= 'Salesforce6';
+        insert acc; // If you will not use DML statement there will be no changge in the database 
+        			//everything on the memory 
+        
+    }
+    
+    public static void updateAcc(){
+        
+        Account acc1= [SELECT Id, Name FROM Account WHERE Name = 'Salesforce6' ];
+        acc1.Name='New Salesforce';
+        update acc1;
+    }
+
+}
+/*
+
