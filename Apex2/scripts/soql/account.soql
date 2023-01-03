@@ -35,3 +35,16 @@ public class MyClass {
 /*
 SELECT Id, Name FROM ACCOUNT WHERE Name NOT IN ('GenePoint', 'sForce')
 */
+
+/*
+public class LearnSoql {
+    
+    public static void updateAcc(){
+        
+        Account newAcc = [SELECT Id, Name FROM Account LIMIT 1];
+        newAcc.Name = 'Salesforce 8';
+        update newAcc;
+    }
+
+}
+*/
