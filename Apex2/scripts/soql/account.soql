@@ -14,7 +14,7 @@ public class MyClass {
         insert acc; // If you will not use DML statement there will be no changge in the database 
         			//everything on the memory 
         
-    }
+    } 
     
     public static void updateAcc(){
         
@@ -24,7 +24,11 @@ public class MyClass {
     }
 
 }
-/*
+*/
+
+//SELECT Id, Name FROM ACCOUNT WHERE Name LIKE '%Gas%'
 
 /*SELECT Id, Name FROM Account Where Name = 'GenePoint' OR BillingState='CA'*/
+
+/* SELECT Id, Name FROM Account Where Name = 'GenePoint' OR BillingState='CA' OR Rating = 'Warm'*/
 
