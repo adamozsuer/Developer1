@@ -26,18 +26,7 @@ public class MyClass {
 }
 */
 
-/*
-public class LearnSoql {
-    
-    public static void updateAcc(){
-        
-        Account newAcc = [SELECT Id, Name FROM Account LIMIT 1];
-        newAcc.Name = 'Salesforce 8';
-        update newAcc;
-    }
 
-}
-*/
 
 //SELECT Id, Name FROM ACCOUNT WHERE Name LIKE '%Gas%'
 
