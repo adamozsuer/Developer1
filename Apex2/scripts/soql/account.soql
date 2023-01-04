@@ -86,7 +86,7 @@ RELATIONSHIP QUERIES
 STANDARD OBJECTS
 Child to Parent
 Use (.) notation 
-SELECT Name, AccountId , Account.Id FROM Contact
+
 SELECT Name, Account.Name FROM Contact
 You can not go more than 5 level
 SELECT Name, Opportunity.Name , Opportunity.Account.Name FROM 
