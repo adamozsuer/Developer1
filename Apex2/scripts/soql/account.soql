@@ -67,7 +67,7 @@ public class LearnSoql {
         
         for (Account acc: [SELECT Id, Name, Description FROM Account WHERE Name =: str]){
             
-            acc.Description = 'Test4';
+           // acc.Description = 'Test4';
             newAccs.add(acc);
         }
             
