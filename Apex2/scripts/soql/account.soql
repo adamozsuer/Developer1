@@ -55,3 +55,24 @@ public class LearnSoql {
 
 }
 */
+
+/*
+public class LearnSoql {
+
+//If I would like to change Account name outside of the class    
+    public static void updateAcc(String str){
+        
+             
+        List<Account> newAccs = new List<Account>();
+        
+        for (Account acc: [SELECT Id, Name, Description FROM Account WHERE Name =: str]){
+            
+            acc.Description = 'Test4';
+            newAccs.add(acc);
+        }
+            
+        update newAccs;
+     }
+		
+}
+*/
