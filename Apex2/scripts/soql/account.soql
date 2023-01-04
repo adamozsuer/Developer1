@@ -76,3 +76,58 @@ public class LearnSoql {
 		
 }
 */
+
+/*
+1
+
+2
+
+RELATIONSHIP QUERIES 
+STANDARD OBJECTS
+Child to Parent
+Use (.) notation 
+SELECT Name, AccountId , Account.Id FROM Contact
+SELECT Name, Account.Name FROM Contact
+You can not go more than 5 level
+SELECT Name, Opportunity.Name , Opportunity.Account.Name FROM 
+OpportunityLineItem
+Parent to Child – Sub Query
+Child query object needs to be plural (‘s’)
+Sub-queries can not be more than 20
+SELECT Name, (SELECT Name FROM Opportunities),  (SELECT Id FROM 
+Campaings),  FROM Account
+SELECT Name, (SELECT Name FROM Contacts) FROM Account
+CUSTOM OBJECTS
+Hi friends (@channel) , Lets create School and Student custom 
+objects and add master detail relationsip (student is child object) 
+and create couple of records for both objects
+Child to Parent
+Use (.) notation
+Use __r instead of __c
+SELECT Name, School__r.Name FROM Student__c
+Parent to Child
+Use __r instead of __c
+Child query object needs to be plural (‘s’)
+SELECT Name, (SELECT Name FROM Students__r) FROM School__c
+HAVING
+-Filter Condition (similar to “WHERE”)
+- Used with GROUP BY
+SELECT Name, Count(Id) FROM Account GROUP BY Name WHERE HAVING 
+Name='Account'
+OFFSET
+- Starting row selection
+- Used for dividing data (records) to pages
+SELECT Name FROM Account ORDER BY Name LIMIT 10 OFFSET 5
+GROUP BY ROLLUP (Field Name)
+-Total count of aggregated numbers
+SELECT Name, COUNT(id) FROM Account  GROUP BY ROLLUP(Name)
+ESCAPE CHARACTERS
+https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/
+soql_sosl/sforce_api_calls_soql_select_quotedstringescapes.htm
+SELECT Id, Name FROM Account WHERE Name LIKE 'Account\%%'
+SELECT Id, Name FROM Account WHERE Name LIKE 'David\'s School'
+NULL Characters
+SELECT Id, Name, Title FROM Contact WHERE Title = NULL
+SELECT Id, Name, Title FROM Contact WHERE Title != NULL
+
+*/
