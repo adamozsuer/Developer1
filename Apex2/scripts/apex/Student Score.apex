@@ -29,3 +29,23 @@ Delete listToDelete;
 
 
  */
+
+ /*
+ //Merge - mergin records into single record - up to 3 records can be merged (1 master+ 2 records)
+//- Only for Leads, Contacts, Accounts, Cases can be merged 
+
+
+// Structure: Merge masterRecord mergedRecord(single or List)
+    
+Account masterAcc = [SELECT Id, Name FROM Account WHERE Name = 'Acc1' LIMIT 1];
+Account mergeAcc = [SELECT Id, Name FROM Account WHERE Name = 'Acc2' LIMIT 1];
+
+Merge masterAcc mergeAcc;
+
+
+Account masterAcc2 = [SELECT Id, Name FROM Account WHERE Name = 'Acc1' LIMIT 1];
+
+List<Account> mergeList = [SELECT Id, Name FROM Account WHERE Name = 'Acc4' OR Name= 'Acc3'];
+
+Merge masterAcc2 mergeList;
+  */
