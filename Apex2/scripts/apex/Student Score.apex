@@ -27,7 +27,7 @@ Test test tt
 List<Account> listToDelete = [SELECT Id, Name FROM Account WHERE Name IN('acc1', 'acc2', 'acc3') ALL ROWS];
 Delete listToDelete;
 
-/**/ /**/ */
+/**/
 
  /*
  //Merge - mergin records into single record - up to 3 records can be merged (1 master+ 2 records)
