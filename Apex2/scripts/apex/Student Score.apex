@@ -34,6 +34,13 @@ Delete listToDelete;
 //- Only for Leads, Contacts, Accounts, Cases can be merged 
 
 
+/*
+FIND {United} IN NAME FIELDS RETURNING Account(Name LIMIT 3 ), Contact(Name, AccountId, MailingStreet LIMIT 2), Opportunity(Name LIMIT 7) LIMIT 12
+
+
+
+ */
+
 // Structure: Merge masterRecord mergedRecord(single or List)
     
 Account masterAcc = [SELECT Id, Name FROM Account WHERE Name = 'Acc1' LIMIT 1];
