@@ -31,7 +31,7 @@ Delete listToDelete;
 
  /*
  //Merge - mergin records into single record - up to 3 records can be merged (1 master+ 2 records)
-//- Only for Leads, Contacts, Accounts, Cases can be merged 
+//- Only for Leads, Contacts, Accounts, Cases can be merged /**/ */
 
 
 /*
