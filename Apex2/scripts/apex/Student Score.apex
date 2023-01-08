@@ -22,7 +22,7 @@ Test test tt
 
 /*
 
-//Delete Multiple Records ALL ROWS
+//Delete Multiple Records ALL ROWS  /**example/ */
 
 List<Account> listToDelete = [SELECT Id, Name FROM Account WHERE Name IN('acc1', 'acc2', 'acc3') ALL ROWS];
 Delete listToDelete;
