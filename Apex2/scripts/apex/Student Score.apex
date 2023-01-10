@@ -57,6 +57,20 @@ FinalAmountOpp.discountCalculator('006Dn000004LonpIAC', .10);// Put unique ID fo
 
  */
 
+ /*
+ // User will update opportunity discount based on the Account Type
+public without sharing class DiscountOppAccount {
+    
+    public static void discountUpdate(){
+        //Get Records
+     List<Opportunity> opps = [SELECT Id, Amount, Final_Amount__c, Account.Type 
+                               FROM Opportunity];
+        
+    }
+
+}
+  */
+
 /**/
 FIND {United} IN NAME FIELDS RETURNING Account(Name, Industry WHERE Rating = 'Hot'), Contact(Name, Phone ORDER BY Name DESC), Opportunity(Name, Amount ORDER BY Name DESC)
  */
