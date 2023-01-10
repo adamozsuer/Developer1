@@ -37,7 +37,9 @@ Delete listToDelete;
 /*
 FIND {United} IN NAME FIELDS RETURNING Account(Name LIMIT 3 ), Contact(Name, AccountId, MailingStreet LIMIT 2), Opportunity(Name LIMIT 7) LIMIT 12
 
-
+/**/
+FIND {United} IN NAME FIELDS RETURNING Account(Name, Industry WHERE Rating = 'Hot'), Contact(Name, Phone ORDER BY Name DESC), Opportunity(Name, Amount ORDER BY Name DESC)
+ */
 
  */
 
