@@ -38,6 +38,26 @@ Delete listToDelete;
 FIND {United} IN NAME FIELDS RETURNING Account(Name LIMIT 3 ), Contact(Name, AccountId, MailingStreet LIMIT 2), Opportunity(Name LIMIT 7) LIMIT 12
 
 /**/
+    
+    public static void discountCalculator(Id oppId, Decimal rate){
+        // Get REcords
+        Opportunity opp = [SELECT Id, Amount FROM Opportunity WHERE Id =: oppId LIMIT 1];
+        
+        // Do calculation
+        opp.FinalAmount__c = opp.Amount -  (opp.Amount*rate);
+        
+        // Manipulate the record by DML
+        update opp;
+    }
+    
+
+}
+
+FinalAmountOpp.discountCalculator('006Dn000004LonpIAC', .10);// Put unique ID for your org
+
+ */
+
+/**/
 FIND {United} IN NAME FIELDS RETURNING Account(Name, Industry WHERE Rating = 'Hot'), Contact(Name, Phone ORDER BY Name DESC), Opportunity(Name, Amount ORDER BY Name DESC)
  */
 
