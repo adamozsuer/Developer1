@@ -142,3 +142,54 @@ List<Account> mergeList = [SELECT Id, Name FROM Account WHERE Name = 'Acc4' OR N
 
 Merge masterAcc2 mergeList;
   */
+
+  /*
+// User will update opportunity discount based on the Account Type
+public without sharing class DiscountOppAccount {
+    
+    public static void discountUpdate(){
+        //Get Records
+     List<Opportunity> opps = [SELECT Id, Amount, Final_Amount__c, Account.Type 
+                               FROM Opportunity];
+     List<Opportunity> newOpps = new List<Opportunity>(); 
+        //Calculations
+        for(Opportunity opp:opps ){
+        	
+            if(opp.Account.Type == 	'Channel Partner / Reseller'){
+                //code block
+                //assign value to the field
+                opp.Final_Amount__c = opp.Amount - (opp.Amount*0.10);
+                //assign record to the new list
+                newOpps.add(opp);
+                
+            }else if (opp.Account.Type == '	Installation Partner'){
+                 //code block
+                //assign value to the field
+                opp.Final_Amount__c = opp.Amount - (opp.Amount*0.20);
+                //assign record to the new list
+                newOpps.add(opp);
+                
+             }else if (opp.Account.Type == 'Technology Partner'){
+                 //code block
+                //assign value to the field
+                opp.Final_Amount__c = opp.Amount - (opp.Amount*0.30);
+                //assign record to the new list
+                newOpps.add(opp);
+                //code block
+            
+             }else{//no condition, rest of the records will be processed here
+                   opp.Final_Amount__c = opp.Amount - (opp.Amount*0.05);
+                //assign record to the new list
+                newOpps.add(opp);
+                //code block
+                 
+             }
+            
+            
+           }
+        // DML Statement
+         update  newOpps;
+
+		}
+	}
+  */
