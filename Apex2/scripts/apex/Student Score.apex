@@ -192,6 +192,61 @@ public without sharing class DiscountOppAccount {
 
 		}
 	}
-  */
+  *//**/ */
 /**/
-  
+  /*
+// User will update opportunity discount based on the Account type 
+public without sharing class DiscountOppAccount {
+
+    public static void discountUpdate(){
+        
+        //Get Records
+        List<Opportunity> opps = [SELECT Id, Amount, FinalAmount__c, Account.Type 
+                                  FROM Opportunity];
+        
+        List<Opportunity> newOpps = new List<Opportunity>();
+        //Calculations
+        for ( Opportunity opp: opps ){
+            
+            if (opp.Account.Type == 'Channel Partner / Reseller'){
+                //code block
+                //assign value to the field
+                 opp.FinalAmount__c = opp.Amount - (opp.Amount*0.10) ;
+                //assign record to the new list
+                newOpps.add(opp);
+            }else if(opp.Account.Type == 'Installation Partner'){
+                
+                //code block
+                 //assign value to the field
+                 opp.FinalAmount__c = opp.Amount - (opp.Amount*0.20) ;
+                //assign record to the new list
+                newOpps.add(opp);
+            }else if(opp.Account.Type == 'Technology Partner'){
+                
+                //code block
+                 //assign value to the field
+                 opp.FinalAmount__c = opp.Amount - (opp.Amount*0.30) ;
+                //assign record to the new list
+                newOpps.add(opp);
+            } else { //no condition, rest of the records will be proccessed here
+                 
+                //assign value to the field
+                opp.FinalAmount__c = opp.Amount - (opp.Amount*0.05) ;
+                //assign record to the new list
+                newOpps.add(opp);
+                
+                
+            }
+            
+            
+        }
+        //DML Statement
+        update newOpps;
+    }
+}
+
+
+DiscountOppAccount.discountUpdate();
+
+
+  */
