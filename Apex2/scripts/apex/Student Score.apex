@@ -244,7 +244,8 @@ public without sharing class DiscountOppAccount {
         update newOpps;
     }
 }
-/**/ */
+
+
 
 DiscountOppAccount.discountUpdate();
 
