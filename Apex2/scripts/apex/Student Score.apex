@@ -328,7 +328,46 @@ public class CreateAccount_Test {
         return cl;
         
     }
+    /*
+    @isTest
+public class TemperatureConverter_Test {
+
+    @isTest static void warmTemp_Test(){
+        
+        Decimal celsius = TemperatureConverter.fToCelsius(77);
+        System.assertEquals(25, celsius, 'Warm temperature is not expected');
+        
+    }
     
+        @isTest static void FreezingTemp_Test(){
+        
+        Decimal celsius = TemperatureConverter.fToCelsius(32);
+        System.assertEquals(0, celsius, 'Freezing temperature is not expected');
+        
+    }
+    
+      @isTest static void BoilingTemp_Test(){
+        
+        Decimal celsius = TemperatureConverter.fToCelsius(212);
+        System.assertEquals(100, celsius, 'Boiling temperature is not expected');
+        
+    }
+    
+      @isTest static void NegativeTemp_Test(){
+        
+        Decimal celsius = TemperatureConverter.fToCelsius(5);
+        System.assertEquals(-15, celsius, 'Negative temperature is not expected');
+        
+    }
+    
+     @isTest static void decimalTemp_Test(){
+        
+        Decimal celsius = TemperatureConverter.fToCelsius(54.5);
+        System.assertEquals(12.5, celsius, 'decimal temperature is not expected');
+        
+    }
+}
+     */
 }
      */
 
