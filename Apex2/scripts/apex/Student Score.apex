@@ -318,7 +318,19 @@ public class CreateAccount_Test {
     System.assertEquals('Triforcia3', accCheck.Name, 'Account is not correct');
     
 }
+    /*
+    public class TemperatureConverter {
+
+    // C= 5/9*(F-32)
+    public static Decimal fToCelcius(Decimal fn){
+        
+        Decimal cl = 5/9*(fn-32);
+        return cl;
+        
+    }
     
+}
+     */
 }
  */
     */
