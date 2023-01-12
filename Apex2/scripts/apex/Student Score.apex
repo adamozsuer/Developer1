@@ -297,7 +297,30 @@ public class Calculator_Test {
             
             }
     
+}/*
+@isTest
+public class CreateAccount_Test {
+    
+    // create mock/test data
+    // Execute method of the class real code with data
+    // Use system.Assert methods to check
+    
+    @isTest static void newAcc_Test(){
+    
+    // create mock/test data
+    
+    
+    // Execute method of the class real code with data
+    CreateAccount.newAcc('Triforcia3');
+    
+    // Use system.Assert methods to check
+    Account accCheck = [SELECT Id, Name FROM Account WHERE Name = 'Triforcia3'];
+    System.assertEquals('Triforcia3', accCheck.Name, 'Account is not correct');
+    
 }
+    
+}
+ */
     */
     
 }
