@@ -271,7 +271,34 @@ public class Calculator {
         
         return num1 / num2;
     }
-    /* */
+    /* 
+    @isTest  // @isTest annotation declare this class as a test class
+public class Calculator_Test {
+    
+    // Create test/mock data
+    // Run the actual code (from real class) with this data
+    // Use System.Assert methods to check data
+    
+    @isTest static void sum_Test(){
+        
+        Integer result = Calculator2.sum(2, 2);
+        
+        System.assertEquals(4, result, 'The result and expected are not equal');
+            
+            
+            }
+    
+     @isTest static void sum_Test(){
+        
+        Integer result = Calculator2.sum(2, 2);
+        
+        System.assertEquals(4, result, 'The result and expected are not equal');
+            
+            
+            }
+    
+}
+    */
     
 }
  */
