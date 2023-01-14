@@ -518,3 +518,30 @@ public class UpdateDescription_Test {
     
 }
    */
+
+   /*
+   @isTest
+public class UserTestExample {
+    
+    @isTest static void userNewTest(){
+        
+        Account a = new Account (Name = 'test');
+        insert a;
+        
+        User u = [SELECT Name FROM User WHERE Name = 'Ugur Ozsuer'];
+        User c = [SELECT Name FROM User WHERE Name = 'Chatter Expert'];
+        System.runAs(u){
+            
+            Account acc = [SELECT Name FROM Account ];
+            System.assertEquals('new test', acc.Name);
+        }
+        System.runAs(c){
+            
+            Account acc = [SELECT Name FROM Account ];
+            System.assertEquals('another test', acc.Name);
+        }
+    }
+    
+}
+   
+   */
