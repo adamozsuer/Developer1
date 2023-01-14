@@ -376,9 +376,62 @@ public class TemperatureConverter_Test {
  */
     */
 
-    /**/ */
+    /*
+    public class UpdateDescription {
 
+    public static void accDescUpdate(){
+        
+        //Get all accounts
+        List<Account> accs = [SELECT Description FROM Account];
+       List<Account> newAccs = new List<Account>();
+        for(Account a : accs){
+            
+            a.Description = 'Updated';
+            newAccs.add(a);
+        }
+        
+        // Save new updated list to the database
+        update newAccs;
+    }
+    
+    
+}
+    */
 
+/*
+@isTest
+public class UpdateDescription_Test {
+
+    @isTest static void accDescUpdate_Test(){
+        
+        //Create mock data
+       
+       List<Account> accs = new List<Account>();
+        
+        for(Integer i = 1; i < 5; i++) { //Traditional for loop
+            
+            Account a = new Account ();
+            a.Name = 'Test' + i; // Account name will be 'Test 1', 'Test 2', 'Test 3', 'Test 4'
+            accs.add(a);
+        }
+        insert accs;
+        //Call actual code
+        
+        UpdateDescription.accDescUpdate();
+        
+        //Assess the result - (System Assert methods)
+        List<Account> newAccs = [SELECT Description FROM Account];
+        
+        for(Account a : newAccs){
+            
+            System.assertEquals('Updated', a.Description, 'Description is not updated');
+        }
+        
+    }
+    
+}
+
+ */
 
 
     
