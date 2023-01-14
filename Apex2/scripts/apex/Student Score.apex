@@ -431,6 +431,42 @@ public class UpdateDescription_Test {
     
 }
 
+/**/
+@isTest
+public class UpdateDescription_Test {
+
+    @isTest static void accDescUpdate_Test(){
+        
+        //Create mock data
+       
+       List<Account> accs = new List<Account>();
+        
+        for(Integer i = 1; i < 5; i++) { //Traditional for loop
+            
+            Account a = new Account ();
+            a.Name = 'Test' + i; // Account name will be 'Test 1', 'Test 2', 'Test 3', 'Test 4'
+            accs.add(a);
+        }
+        insert accs;
+        //Call actual code
+        
+        UpdateDescription.accDescUpdate();
+        
+        //Assess the result - (System Assert methods)
+        List<Account> newAccs = [SELECT Description FROM Account];
+        
+        for(Account a : newAccs){
+            
+            System.assertEquals('Updated', a.Description, 'Description is not updated');
+        }
+        
+        System.assertEquals(4,newAccs.size(), 'Number of accounts are less than expected');
+        
+    }
+    
+}
+ */
+
  */
 
 
