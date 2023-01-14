@@ -584,3 +584,48 @@ public class NewTestMethod {
     
 }
      */
+
+     /*
+     public class LucianIsTeaching {
+
+    public static void insertaccount(){
+        
+        List<Account> accList = new List<Account>();
+        for (Integer i=1; i<=5; i++){
+            Account acc = new Account();
+            acc.Name = 'Triforcia Recap' + i;
+            acc.Phone = '12345678'+ i;
+            accList.add(acc);
+        }
+        
+        insert accList;
+    
+    
+    List<Contact> conList = new List <Contact>();
+    
+    for(Account acc1:accList){
+        Contact con = new Contact();
+        con.LastName = acc1.Name;
+        con.AccountId = Con.Id;
+        conList.add(con);
+    }
+    
+    insert conList;
+        
+    List<Opportunity> oppList = new List<Opportunity>();
+    
+        for(Account acc2:accList){
+            Opportunity opp = new Opportunity();
+            opp.Name = acc2.Name;
+            opp.StageName = 'Closed Won';
+            opp.CloseDate = date.Today(); // system.Today();
+            opp.AccountId = opp.Id;
+            oppList.add(opp);
+            
+            }
+        insert oppList;
+    
+}
+}
+     
+      */
