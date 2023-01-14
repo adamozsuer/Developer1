@@ -549,3 +549,38 @@ public class UserTestExample {
    /*
    
     */
+
+    /*
+    
+    @isTest
+public class NewTestMethod {
+
+    // creata mock data
+    // execute actual code
+
+    @TestSetup static void createData(){
+        
+        Account a = new Account (Name = 'Triforcia');
+        insert a;
+        
+        Contact c = new Contact (LastName = 'Blaze');
+        insert c;
+        
+    }
+    
+        // system assert methods to test
+        
+    @isTest static void methodOne(){
+        
+        Account acc = new Account(Name - 'methodOne Account');
+        insert acc;
+        
+        List<Account> accList = [SELECT Id, Name FROM Account];
+        
+        system. assertEquals(2, accList.size());
+        
+    }  
+  
+    
+}
+     */
