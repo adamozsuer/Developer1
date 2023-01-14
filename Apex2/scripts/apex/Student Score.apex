@@ -677,6 +677,4 @@ public class NewTestMethod {
 
        */
 
-       /**/ */
-
-       /**/ */
+       
