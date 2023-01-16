@@ -678,5 +678,9 @@ public class NewTestMethod {
        */
 
       
-      
+      /*
+      Account myAcc = [SELECT Id, Name, FROM Account WHERE Name ='adam' LIMIT1];
+List<Account> workshopAcc = [SELECT Id, Name FROM Account WHERE Name LIKE 'Workshop%' LIMIT 2]
+    Merge myAccworkshopAcc;
+       */
       
