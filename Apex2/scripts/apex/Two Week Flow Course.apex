@@ -25,3 +25,35 @@ public class PrivateMethodClass_Test {
     
 }
  */
+
+ /*
+ 
+ // We need a discount calculator for the opportunity based on Account Rating, user will provide the opportunity Id 
+public class DiscountCalculator {
+    
+    static Decimal calculateDiscount(Id oppId){
+        
+        //Query the Opportunities  and Account related to the Opportunities
+        
+        Opportunity opp = [SELECT Id, Amount, Account.Rating 
+                           FROM Opportunity 
+                           WHERE Id =: oppId];
+        Decimal discount = 0;
+        // Check the Account's rating and calculate the discount accordingly
+        
+        if(opp.Account.Rating == 'Hot'){
+           discount = opp.Amount * 0.10;
+            
+            
+        }Else if (opp.Account.Rating == 'Warm'){
+        	discount = opp.Amount * 0.05;
+            
+        }Else {
+        
+            discount = 0;
+        }
+        return discount;
+    }
+
+}
+  */
