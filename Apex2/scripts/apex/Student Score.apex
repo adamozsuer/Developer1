@@ -683,5 +683,58 @@ public class NewTestMethod {
 List<Account> workshopAcc = [SELECT Id, Name FROM Account WHERE Name LIKE 'Workshop%' LIMIT 2]
     Merge myAccworkshopAcc;
        */
+
+
+       /*
+       @isTest
+public class TestDataFactory {
+    
+    public static List <Account> CreateAccounts(Integer num){
+        List <Account> accs = new List<Account>();
+        
+        for(Integer i=0; i<num; i++ ){
+            
+            Account a = new Account(Name = 'Triforcia' + i);
+        	accs.add(a);
+                      
+        }
+        insert accs;
+        return accs;
+    }
+    
+     public static List <Contact> CreateContactss(Integer num){
+        List <Contact> cons = new List<Contact>();
+        
+        for(Integer  i=0; i<num; i++ ){
+            
+            Contact a = new Contact(LastName = 'Triforcia' + i);
+        	cons.add(a);
+                       
+        }
+        insert cons;
+        return cons;
+    }
+
+}
+
+@isTest
+public class myClass_Test {
+    
+    @isTest static void utilityMockData(){
+        
+        //create 5 account records
+        //
+        List<Account> accList = TestDataFactory.CreateAccounts(5);
+        
+        system.assertEquals(5, accList.size());
+        
+    }
+
+}
+
+
+
+       
+        */
       
       
