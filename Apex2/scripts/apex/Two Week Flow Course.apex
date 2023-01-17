@@ -12,3 +12,16 @@ while (i<100) {
     }
     System.debug((i-x)+'. Day of Flow Course Plan');
 }
+
+/*
+@isTest
+public class PrivateMethodClass_Test {
+
+    @isTest static void privateMethod_Test(){
+        
+        PrivateMethodClass.privateMethod();
+        
+    }
+    
+}
+ */
