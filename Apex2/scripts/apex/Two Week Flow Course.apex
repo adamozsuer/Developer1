@@ -91,6 +91,20 @@ public class DiscountCalculator {
 }
    */
 
- /* */
+ /*
+ SELECT Name FROM Account WHERE Name = 'Ben McCarthy'
+
+Account acc= new Account(Name = 'Ben McCarthy');
+insert acc;
+
+
+trigger UpdateDescription on Account (before insert) {
+
+    System.debug('Trigger Test');
+    
+    
+}
+
+  */
 
  
