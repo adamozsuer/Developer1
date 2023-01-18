@@ -107,4 +107,41 @@ trigger UpdateDescription on Account (before insert) {
 
   */
 
- 
+ /*
+ @isTest
+public class ContactTrigger_1Test {
+    
+    @isTest static void singleContactTrigger1_Test(){
+        
+        //Create a new Contact record to fire ContactTrigger1' trigger
+        
+        Contact c = new Contact(LastName = 'Smith');
+        //  c.Description = 'Updated by Contact Trigger 1'; Trigger will handle this action
+        insert c; // New contact will be created - LastName = Smith, Description : 'Updated by Contact Trigger 1'
+        
+        Contact cToGet = [SELECT Description FROM Contact LIMIT 1];
+        System.assertEquals('Updated by Contact Trigger 1' , cToGet.Description, 'ContactTrigger1 did not work as expected');
+        
+    }
+    
+    @isTest static void multipleContactTrigger1_Test(){
+        
+        List <Contact> cons = new List <Contact>();
+        for(Integer i=0; i<3; i++){
+            
+            Contact c = new Contact(LastName = 'Contact' + i);
+            cons.add(c);
+        }
+        insert cons;
+        
+        List<Contact> conList = [SELECT Description FROM Contact];
+        
+        for(Contact c : conList){
+            
+           System.assertEquals('Updated by Contact Trigger 1', c.Description, 'ContactTrigger1 did not work as expected');
+        }
+    }
+    
+    
+}
+  */
