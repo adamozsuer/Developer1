@@ -147,4 +147,73 @@ public class ContactTrigger_1Test {
   */
 
   /**/
-  
+
+  /*
+  @isTest
+public class ContactTrigger2_Test {
+    
+    @isTest static void singleContactTrigger2_Test(){
+        
+        //Create a record 
+        
+        Contact c = new Contact(LastName = 'Smith');
+        insert c;
+        
+        // Update the record
+        
+        Contact cToUpdate = [SELECT LastName 
+                             FROM Contact 
+                             LIMIT 1];
+        cToUpdate.LastName = 'Johnson';
+        
+        update cToUpdate;
+        
+        // Testing
+         Contact cToGet = [SELECT LastName, Description 
+                           FROM Contact 
+                           LIMIT 1];
+       
+        Assert.areEqual('Change made by Ugur Ozsuer', cToGet.Description, 'Contact Trigger 2 is not working as expected');
+        
+    }
+    
+    @isTest static void multipleContactTrigger2_Test(){
+        
+        //Create multiple records
+        List<Contact> firstList = new List<Contact>();
+        
+        for(Integer i=0; i<10; i++){
+            
+        Contact c = new Contact(LastName = 'Contact' + i);
+        firstList.add(c);
+            
+        }
+        insert firstList;
+        
+        //Update multiple Contact records
+        
+        List <Contact> secondList = [SELECT LastName FROM Contact];
+        
+        List <Contact> thirdList = new List<Contact>();
+        for(Contact cToUpdate : secondList){
+            
+            cToUpdate.LastName = 'cToUpdate' +1;
+            thirdList.add(cToUpdate);
+        }
+        
+        update thirdList;
+        
+        //Testing
+        List <Contact> fourthList = [SELECT Description 
+                                     FROM Contact];
+        
+        for(Contact cToTest : fourthList){
+           
+            
+            
+        }
+        
+    }
+
+}
+   */
