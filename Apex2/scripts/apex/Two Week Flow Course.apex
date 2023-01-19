@@ -238,3 +238,23 @@ public class ContactTrigger2_Test {
 
 }
     */
+
+    /*
+    //Create an opportunity automatically if user creates an account
+trigger Account1 on Account (after insert) {
+
+    List<Opportunity> oppList = new List<Opportunity>();
+    for(Account a : Trigger.New){
+        
+        Opportunity o = new Opportunity();
+        o.Name = a.Name + 'Opportunity';  //Salesforce Opportunity
+        o.CloseDate = Date.today() + 15;
+        o.StageName = 'Prospecting';
+        o.AccountId = a.Id;
+        oppList.add(o);
+        
+    }
+    insert oppList;
+    
+}
+     */
