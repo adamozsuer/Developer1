@@ -217,3 +217,24 @@ public class ContactTrigger2_Test {
 
 }
    */
+
+   /*
+   trigger ContactTrigger on Contact (before insert, before update) {
+    
+    for(Contact c: Trigger.new){
+        
+        if(Trigger.isBefore && Trigger.isInsert){
+            
+                c.Description = 'Updated by Contact Trigger 1';
+        }
+        
+        if(Trigger.isBefore && Trigger.isUpdate){
+            
+             c.Description = 'Change made by ' + UserInfo.getName();
+            
+        }
+        
+    }
+
+}
+    */
