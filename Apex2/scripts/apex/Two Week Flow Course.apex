@@ -258,3 +258,21 @@ trigger Account1 on Account (after insert) {
     
 }
      */
+
+     /*
+     @isTest
+public class Account1_Test {
+    @isTest static void singleAccount_Test(){
+    //Create account records to fire Account trigger
+    
+    TestDataFactory.CreateAccounts(1); //Expecting to see an account record(trigger will be fired and related opportunity will be created)
+
+        //Get the record from database
+        Opportunity o = [SELECT Name, AccountId, Account.Id FROM Opportunity LIMIT 1];
+        
+        //Testing
+        assert.areEqual(o.AccountId, o.Account.Id, 'Account Trigger did not work as expected');
+}
+    
+}
+      */
