@@ -277,4 +277,11 @@ public class Account1_Test {
 }
       */
 
-      /**/ */
+      /*
+
+      public static String toUpperC(string  name, string Lname){
+        String fullName = name+' '+Lname;
+        return fullName;
+    }
+      
+      */
