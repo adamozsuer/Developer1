@@ -286,4 +286,44 @@ public class Account1_Test {
       
       */
 
+      /*
+      //Create an opportunity automatically if user creates an account
+//When a new account created and the account type is prospect then create a task for the parent user, send email alert to the user
+trigger Account1 on Account (after insert) {
+    
+    List<Opportunity> oppList = new List<Opportunity>();
+    List<Task> tasks = new List<Task>();
+    for(Account a : Trigger.New){
+        
+        Opportunity o = new Opportunity();
+        o.Name = a.Name + 'Opportunity';  //Salesforce Opportunity
+        o.CloseDate = Date.today() + 15;
+        o.StageName = 'Prospecting';
+        o.AccountId = a.Id;
+        oppList.add(o);
+        
+        if(a.Type == 'Prospect' ){
+            
+            
+            
+            // sObject label = new sObject();
+            // List<sObject> label = new List<sObject>();
+            
+            Task t = new Task();
+            
+            t.Subject = 'New Account Trigger Test';
+            t.Status = 'In Progress';
+            t.OwnerId = UserInfo.getUserId();
+            t.WhatId = a.Id;
+            tasks.add(t);
+            
+        }
+        
+        
+    }
+    insert oppList;
+    insert tasks;
+    
+}
       
+       */
