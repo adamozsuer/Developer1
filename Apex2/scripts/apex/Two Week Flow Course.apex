@@ -427,4 +427,48 @@ if (trigger.isBefore && Trigger.isDelete){
 }
          */
 
-         /** */
+         /*
+         @isTest
+public class UpdateAsset_Test {
+    
+    @TestSetup static void createData(){
+        
+        //Create contact, inspection and asset records
+        
+        Account testAcc = new Account(Name = 'Test Account');
+        insert testAcc;
+        Contact testCont = new Contact(LastName = 'Test Contact' ,AccountId = testAcc.Id);
+        insert testCont;
+        Asset testAsset = new Asset(Name = 'Test Asset', Inspection_Required__c = false, ContactId =  testCont.Id);
+        insert testAsset;
+        Inspection__c testIns = new Inspection__c (Asset__c = testAsset.Id);
+    }
+    
+    @isTest static void testInsert(){
+        // Get Asset record
+        Asset testAsset = [SELECT Id, Inspection_Required__c FROM Asset LIMIT 1];
+        
+        assert.areEqual(true, testAsset.Inspection_Required__c, 'Inspection Required field is not updated by the UpdateAsset tirgger on INcpection object');
+        
+        // verify that the Inspection Required field on the Asset record is set to true
+        
+        
+    }
+    
+//    @isTest static void testUpdate(){
+  //        Asset testAsset = [SELECT Id, Inspection_Required__c FROM Asset];
+  //      Inspection__c testInspection = [SELECT Status__c FROM Inspection__c  WHERE Asset__c =: testAsset.Id];
+        
+        //Update the test inspection Status field to completed
+    //    testInspection.Status__c = 'Completed';
+    //    update testInspection;
+        // Trigger worked here
+   //     Asset updatedAsset = [SELECT Id, Inspection_Required__c FROM Asset];
+        //Testing : Verify that the 'Inspection Required ' field on the Asset record is set to false
+    //     assert.areEqual(false, updatedAsset.Inspection_Required__c, 'Inspection Required is not updated by the UpdateAsset tirgger on INcpection object');
+      
+  //  }
+    
+    
+}
+          */
