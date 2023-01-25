@@ -606,7 +606,15 @@ public class AccountDelete_Test {
 }
      */
 }
+    public class FutureExample {
+	
+    @future
+    public static void myFutureMethod(String firstName, Integer age){
+        
+        System.debug('My name is  ' + firstName + ' and my age is ' + age + '.');
+    }
     
+}
 }
 
 
