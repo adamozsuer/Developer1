@@ -550,7 +550,61 @@ trigger Account1 on Account (after insert, after delete) {
     }
     
     insert delAccs;   
+    /*
+    @isTest
+public class AccountDelete_Test {
+
+    @isTest static void singleDeleteTest(){
+        //Create an Account
+        Account acc  = new Account(Name= 'Test Account', Type= 'Prospect', Phone = '555-555-55-55');
+        insert acc;
+        
+        //Delete the Account
+        delete acc;
+        
+        //Verify the DeleteAccount record creation
+        DeleteAccounts__c delAcc = [SELECT Id, Phone__c, Type__c, DeletedDate__c, Name 
+                                    FROM DeleteAccounts__c 
+                                    LIMIT 1 ];
+        Account recAcc = [SELECT Name, Type, Phone 
+                          FROM Account 
+                          LIMIT 1 ALL ROWS];
+        
+        Assert.areEqual(recAcc.Name, delAcc.Name , 'Account Name is not as expected');
+        Assert.areEqual(recAcc.Phone, delAcc.Phone__c, 'Account Phone is not as expected');
+        Assert.areEqual(recAcc.Type, delAcc.Type__c, 'Account Type is not as expected');
+        Assert.isNotNull(delAcc.DeletedDate__c, 'Deleted Date field is null');    
+        
+    }
     
+    @isTest static void multipleDeleteTest(){
+        //Create Accounts
+       TestDataFactory.createAccounts(5);
+        
+        //Delete Accounts
+        List<Account> accList = [SELECT Id 
+                                 FROM Account];
+        
+        delete accList;
+        
+        //Verify the DeleteAccount records creation
+        
+          List<DeleteAccounts__c> delAccs = [SELECT Id, Phone__c, Type__c, DeletedDate__c, Name 
+                                    			FROM DeleteAccounts__c];
+        
+        List<Account> recAccs = [SELECT Name, Type, Phone 
+                                FROM Account 
+                                ALL ROWS];
+        
+        for (Integer i=0; i<5; i++ ){ 
+        Assert.areEqual(recAccs[i].Name, delAccs[i].Name , 'Account Name is not as expected');
+        Assert.areEqual(recAccs[i].Phone, delAccs[i].Phone__c, 'Account Phone is not as expected');
+        Assert.areEqual(recAccs[i].Type, delAccs[i].Type__c, 'Account Type is not as expected');
+        Assert.isNotNull(delAccs[i].DeletedDate__c, 'Deleted Date field is null');
+        }
+    }
+}
+     */
 }
     
 }
