@@ -616,4 +616,23 @@ public class AccountDelete_Test {
     
 }
 }
-/**/ */
+/*
+
+public class FutureExample {
+	
+    @future
+    public static void myFutureMethod(String firstName, Integer age){
+      // This code below (commented out) will create an error on the background, you can check from Apex Jobs  
+     //   Account acc = new Account();
+     //   update acc;
+        
+        System.debug('My name is  ' + firstName + ' and my age is ' + age + '.');
+    }
+    
+     public static void regularMethod(String firstName, Integer age){
+             
+        System.debug('My name is  ' + firstName + ' and my age is ' + age + '.');
+    }
+}
+
+ */
