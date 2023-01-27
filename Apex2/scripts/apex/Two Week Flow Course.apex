@@ -637,3 +637,26 @@ public class FutureExample {
 
  */
 
+/*
+
+trigger DuplicatePreventionOnLead on Lead (before insert) {  // Trigger new
+    
+    List<Lead> leadList = [SELECT Id, firstName, lastName FROM Lead];
+    
+    for(Lead myLead: Trigger.new){
+        
+        for(Lead oldLead: leadList){
+            
+            if(myLead.firstName == oldLead.firstName && myLead.LastName == oldLead.LastName){
+                
+                myLead.FirstName.addError('Lead already exists with the same Lead first name and last name');
+                
+                
+            }
+            
+        }
+        
+    }
+
+}
+ */
