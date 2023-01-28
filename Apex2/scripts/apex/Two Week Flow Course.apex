@@ -662,4 +662,10 @@ trigger DuplicatePreventionOnLead on Lead (before insert) {  // Trigger new
  */
 
  
- 
+ /*
+ List<Id> salesRepsId = new List<Id>{'a083t00000XSy2bAAD', 'a083t00000XSy2WAAT', 'a083t00000XSy2RAAT'};
+    List<Decimal> salesData = new List<Decimal>{1000, 1000, 1000};
+CommissionCalculator.calculateCommission(salesRepsId, salesData);
+
+
+  */
