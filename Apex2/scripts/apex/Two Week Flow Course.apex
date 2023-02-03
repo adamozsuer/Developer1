@@ -669,4 +669,32 @@ CommissionCalculator.calculateCommission(salesRepsId, salesData);
 
 
   */
-/**/ */
+/*
+//a. Create 100 test leads using the future method that has
+//names like test 1, test 2, test 3 etc. to use in the schedulable and
+//queueable apex jobs.
+public class FutureLead {
+    
+    @future
+    
+    public static void createLeads() {
+        
+        List<Lead> leadList = new List<Lead>();
+        
+        for (Integer i=1; i<=100; i++) {
+            
+            Lead ld = new Lead();
+            
+            ld.LastName = 'Test ' + i;
+            ld.Company = 'Test Company ' + i;
+            ld.Status = 'Open - Not Contacted';
+            
+            leadList.add(ld);
+            
+        }
+        
+        insert leadList;
+    }
+    
+    
+ */
