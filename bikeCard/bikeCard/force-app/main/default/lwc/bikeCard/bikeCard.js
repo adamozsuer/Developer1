@@ -1,9 +1,17 @@
-import { LightningElement } from 'lwc';
-export default class BikeCard extends LightningElement {
-  name = 'Electra X4';
-  description = 'A sweet bike built for comfort.';
-  category = 'Mountain';
-  material = 'Steel';
-  price = '$2,700';
-  pictureUrl = 'https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax4.jpg';
+import { LightningElement, api } from 'lwc';
+import { bikes } from 'c/data';
+export default class Detail extends LightningElement {
+    product;
+    // Private var to track @api productId
+    _productId = undefined;
+    // Use set and get to process the value every time it's
+    // requested while switching between products
+    set productId(value) {
+        this._productId = value;
+        this.product = bikes.find(bike => bike.fields.Id.value === value);
+    }
+    // getter for productId
+    @api get productId(){
+        return this._productId;
+    }
 }
