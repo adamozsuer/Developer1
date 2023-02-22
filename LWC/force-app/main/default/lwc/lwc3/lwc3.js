@@ -6,6 +6,12 @@ textValue;
         this.textValue = event.detail.value;
     }
 
+    handleButtonClick(event){
 
+              alert("You resetted the name");
+              this.textValue = "User";
+
+
+    }
 
 }
