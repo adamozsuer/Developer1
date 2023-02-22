@@ -25,13 +25,18 @@ handleButtonClick(){
     this.calculation = this.weight / ((this.height)*(this.height)); // For Usa add *703
 
     if(this.calculation < 19){
+        this.result="Underweight";
 
     }else if(this.calculation >= 19 && this.calculation < 25){
+        this.result="Healthy weight";
 
     }else if(this.calculation >= 25 && this.calculation < 30){
 
+        this.result="Overweight";
+
     }else{
-        
+
+        this.result="Obesity";
     }
 }
 
