@@ -8,7 +8,7 @@ Category = "Travel Trailers";
 Price = "$94,400";
 Sleeps = "8";
 Length = "30'";
-pictureURL = "https://cdn.airstream.com/wp-content/uploads/2022/09/Flying-Cloud-nav-2.png?auto=format&fit=crop&crop=edges&w=540"
+pictureURL = "https://cdn.airstream.com/wp-content/uploads/2022/09/Flying-Cloud-nav-2.png?auto=format&fit=crop&crop=edges&w=540";
 
 
 }
