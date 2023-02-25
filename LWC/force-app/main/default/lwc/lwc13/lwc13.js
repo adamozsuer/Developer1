@@ -1,14 +1,13 @@
-import { LightningElement, api } from 'lwc';
-
+import { LightningElement,api } from 'lwc';
 
 export default class Lwc13 extends LightningElement {
 
     @api richtext;
-@api richtextLabel;
-
+    @api richtextlabel;
 
     handleChange(event) {
-        this.richtext = events.detail.value;
+        this.richtext = event.detail.value;
     }
 
+    
 }
